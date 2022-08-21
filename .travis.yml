@@ -14,6 +14,11 @@ before_install:
 # Pre-testing installs
 install:
   - docker-compose -f docker-compose-build.yaml build --parallel
+  - docker tag reverseproxy germanho112/reverseproxy:latest
+  - docker tag udagram-api-feed germanho112/udagram-api-feed:latest
+  - docker tag udagram-api-user germanho112/udagram-api-user:latest
+  - docker tag udagram-frontend:local germanho112/udagram-frontend:latest
+
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push "$DOCKER_USERNAME"/udagram-api-users:latest
