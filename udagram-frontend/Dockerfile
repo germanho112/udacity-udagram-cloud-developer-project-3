@@ -1,3 +1,4 @@
+#!/bin/bash
 ## Build
 FROM beevelop/ionic:latest AS ionic
 # Create app directory

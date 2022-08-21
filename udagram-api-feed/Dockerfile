@@ -1,3 +1,4 @@
+#!/bin/bash
 FROM node:13
 # Create app directory
 WORKDIR /usr/src/app
