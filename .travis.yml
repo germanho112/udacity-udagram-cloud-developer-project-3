@@ -13,10 +13,10 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
 # Pre-testing installs
 install:
-  - docker build --platform=linux/amd64 udagram-api-user:latest
-  - docker build --platform=linux/amd64 udagram-api-feed:latest
-  - docker build --platform=linux/amd64 udagram-frontend:latest
-  - docker build --platform=linux/amd64 reverseproxy:latest
+  - docker build --platform=linux/amd64 udagram-api-user-2:latest
+  - docker build --platform=linux/amd64 udagram-api-feed-2:latest
+  - docker build --platform=linux/amd64 udagram-frontend-2:latest
+  - docker build --platform=linux/amd64 reverseproxy-2:latest
   - docker tag udagram-api-feed germanho112/udagram-api-feed:latest
   - docker tag udagram-api-user germanho112/udagram-api-user:latest
   - docker tag udagram-frontend:local germanho112/udagram-frontend:latest
